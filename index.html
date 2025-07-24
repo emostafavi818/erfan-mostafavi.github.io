@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>ورود به رزومه</title>
+</head>
+<body style="direction: rtl; font-family: Tahoma; text-align: center; padding-top: 100px; background-color: #f2f2f2;">
+
+  <h2>برای ورود به رزومه، لطفاً رمز عبور را وارد کنید</h2>
+
+  <script>
+    let password = prompt("رمز عبور:");
+    if (password === "2/7182818") {
+      window.location.href = "resume.html";
+    } else {
+      alert("رمز اشتباه است. لطفاً دوباره تلاش کنید.");
+      location.reload();
+    }
+  </script>
+
+</body>
+</html>
