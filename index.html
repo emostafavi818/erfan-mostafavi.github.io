@@ -12,7 +12,6 @@
       background-size: cover;
       padding: 20px;
     }
-
     .container {
       background-color: rgba(255, 255, 255, 0.95);
       padding: 30px;
@@ -21,34 +20,28 @@
       margin: auto;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-
     h1, h2 {
       text-align: center;
     }
-
     .lang-section {
       margin-top: 30px;
       border-top: 1px solid #ccc;
       padding-top: 20px;
     }
-
     .photo {
       text-align: center;
       margin: 30px 0;
     }
-
     .photo img {
       width: 200px;
       margin: 10px;
       border-radius: 10px;
     }
-
     .signature {
       text-align: center;
       margin-top: 40px;
       display: none;
     }
-
     button {
       display: block;
       margin: 20px auto;
@@ -56,7 +49,6 @@
       font-size: 16px;
       cursor: pointer;
     }
-
     .flag {
       width: 20px;
       vertical-align: middle;
@@ -104,7 +96,7 @@
       <p><strong>Alter:</strong> <span id="age-de"></span> Jahre</p>
       <p><strong>Ausbildung:</strong> Abitur in Mathematik und Physik von der Razi-Schule in Teheran (Valiasr Straße, oberhalb Vanak Platz)</p>
       <p><strong>Sprachen:</strong> Persisch <img src="https://flagcdn.com/16x12/ir.png" class="flag" alt="IR">, Englisch <img src="https://flagcdn.com/16x12/us.png" class="flag" alt="US">, Deutsch <img src="https://flagcdn.com/16x12/de.png" class="flag" alt="DE"> (auf A2-Niveau, nahe B2)</p>
-     <p><strong>Veröffentlichungen:</strong> ............</p>
+      <p><strong>Veröffentlichungen:</strong> ............</p>
       <p><strong>Artikel-Link:</strong> ............</p>
       <p><strong>E-Mail:</strong> emostafavi818@gmail.com</p>
       <p><strong>Telegram:</strong> ............</p>
@@ -126,7 +118,7 @@
 
   <!-- Script -->
   <script>
-    // محاسبه‌ی لحظه‌ای سن
+    // محاسبه‌ی سن
     function calculateAge(birthDateStr) {
       const birthDate = new Date(birthDateStr);
       const today = new Date();
@@ -138,14 +130,13 @@
       return age;
     }
 
-    const age = calculateAge("2007-09-03"); // تاریخ تولد واقعی اینجا
+    const age = calculateAge("2007-09-03"); // تاریخ تولد پنهان
     document.getElementById("age-fa").textContent = age;
     document.getElementById("age-en").textContent = age;
     document.getElementById("age-de").textContent = age;
 
     // رمزگذاری ساده برای امضا
-    const hashedPassword = btoa("3/141592653"); // رمز به base64 رمزنگاری شده
-
+    const hashedPassword = btoa("3/141592653"); // رمز base64 شده
     function showSignature() {
       const input = prompt("برای مشاهده امضا، رمز را وارد کنید:");
       if (btoa(input) === hashedPassword) {
