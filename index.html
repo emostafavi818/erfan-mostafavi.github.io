@@ -3,20 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>ورود به رزومه</title>
-</head>
-<body style="direction: rtl; font-family: Tahoma; text-align: center; padding-top: 100px; background-color: #f2f2f2;">
-
-  <h2>برای ورود به رزومه، لطفاً رمز عبور را وارد کنید</h2>
-
-  <script>
-    let password = prompt("رمز عبور:");
-    if (password === "2/7182818") {
-      window.location.href = "resume.html";
-    } else {
-      alert("رمز اشتباه است. لطفاً دوباره تلاش کنید.");
-      location.reload();
+  <style>
+    body {
+      direction: rtl;
+      font-family: Tahoma;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f2f2f2;
     }
-  </script>
-
+    h2 {
+      color: #333;
+    }
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    a.button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>برای دیدن رزومه روی دکمه زیر کلیک کنید</h2>
+  <a class="button" href="resume.html">ورود به رزومه</a>
 </body>
 </html>
