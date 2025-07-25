@@ -1,23 +1,159 @@
 <!DOCTYPE html>
 <html lang="fa">
-  <head>
-    <meta charset="UTF-8" />
-    <title>در حال انتقال...</title>
-    <meta http-equiv="refresh" content="3; URL=resume.html" />
-    <style>
-      body {
-        font-family: Tahoma, sans-serif;
-        background-color: #f8f8f8;
-        text-align: center;
-        padding-top: 100px;
-        font-size: 1.5em;
-        color: #333;
+<head>
+  <meta charset="UTF-8" />
+  <title>Erfan Mostafavi's Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      direction: rtl;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .lang-section {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .photo {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .photo img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .signature {
+      text-align: center;
+      margin-top: 40px;
+      display: none;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .flag {
+      width: 20px;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>رزومه‌ی عرفان مصطفوی | Erfan Mostafavi's Resume | Lebenslauf Erfan Mostafavi</h1>
+
+    <!-- فارسی -->
+    <div class="lang-section">
+      <h2>رزومه به زبان فارسی</h2>
+      <p><strong>نام و نام خانوادگی:</strong> عرفان مصطفوی</p>
+      <p><strong>محل تولد:</strong> تهران</p>
+      <p><strong>سن:</strong> <span id="age-fa"></span> سال</p>
+      <p><strong>تحصیلات:</strong> دیپلم ریاضی و فیزیک از دبیرستان رازی تهران (خیابان ولیعصر، بالاتر از میدان ونک)</p>
+      <p><strong>زبان‌ها:</strong> فارسی <img src="https://flagcdn.com/16x12/ir.png" class="flag" alt="IR">، انگلیسی <img src="https://flagcdn.com/16x12/us.png" class="flag" alt="US">، آلمانی <img src="https://flagcdn.com/16x12/de.png" class="flag" alt="DE"> (سطح A2 نزدیک B2)</p>
+      <p><strong>مقالات:</strong> ............</p>
+      <p><strong>آدرس مقاله:</strong> ............</p>
+      <p><strong>ایمیل:</strong> emostafavi818@gmail.com</p>
+      <p><strong>تلگرام:</strong> ............</p>
+    </div>
+
+    <!-- English -->
+    <div class="lang-section" dir="ltr">
+      <h2>Resume in English</h2>
+      <p><strong>Full Name:</strong> Erfan Mostafavi</p>
+      <p><strong>Place of Birth:</strong> Tehran</p>
+      <p><strong>Age:</strong> <span id="age-en"></span> years</p>
+      <p><strong>Education:</strong> High school diploma in Mathematics and Physics – Razi High School, Tehran (Valiasr Street, above Vanak Square)</p>
+      <p><strong>Languages:</strong> Persian <img src="https://flagcdn.com/16x12/ir.png" class="flag" alt="IR">, English <img src="https://flagcdn.com/16x12/us.png" class="flag" alt="US">, German <img src="https://flagcdn.com/16x12/de.png" class="flag" alt="DE"> (at A2 level, near B2)</p>
+      <p><strong>Publications:</strong> ............</p>
+      <p><strong>Article URL:</strong> ............</p>
+      <p><strong>Email:</strong> emostafavi818@gmail.com</p>
+      <p><strong>Telegram:</strong> ............</p>
+    </div>
+
+    <!-- German -->
+    <div class="lang-section" dir="ltr">
+      <h2>Lebenslauf auf Deutsch</h2>
+      <p><strong>Vollständiger Name:</strong> Erfan Mostafavi</p>
+      <p><strong>Geburtsort:</strong> Teheran</p>
+      <p><strong>Alter:</strong> <span id="age-de"></span> Jahre</p>
+      <p><strong>Ausbildung:</strong> Abitur in Mathematik und Physik von der Razi-Schule in Teheran (Valiasr Straße, oberhalb Vanak Platz)</p>
+      <p><strong>Sprachen:</strong> Persisch <img src="https://flagcdn.com/16x12/ir.png" class="flag" alt="IR">, Englisch <img src="https://flagcdn.com/16x12/us.png" class="flag" alt="US">, Deutsch <img src="https://flagcdn.com/16x12/de.png" class="flag" alt="DE"> (auf A2-Niveau, nahe B2)</p>
+     <p><strong>Veröffentlichungen:</strong> ............</p>
+      <p><strong>Artikel-Link:</strong> ............</p>
+      <p><strong>E-Mail:</strong> emostafavi818@gmail.com</p>
+      <p><strong>Telegram:</strong> ............</p>
+    </div>
+
+    <!-- عکس‌ها -->
+    <div class="photo">
+      <img src="photo1.jpg" alt="Photo 1">
+      <img src="photo2.jpg" alt="Photo 2">
+    </div>
+
+    <!-- امضا -->
+    <h2>امضا / Signature / Unterschrift</h2>
+    <button onclick="showSignature()">امضا / Signature / Unterschrift</button>
+    <div class="signature" id="signatureDiv">
+      <img src="signature.png" alt="Signature" width="250">
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    // محاسبه‌ی لحظه‌ای سن
+    function calculateAge(birthDateStr) {
+      const birthDate = new Date(birthDateStr);
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
       }
-    </style>
-  </head>
-  <body>
-    <p>در حال انتقال...</p>
-    <p>Redirecting...</p>
-    <p>Weiterleitung...</p>
-  </body>
+      return age;
+    }
+
+    const age = calculateAge("2007-09-03"); // تاریخ تولد واقعی اینجا
+    document.getElementById("age-fa").textContent = age;
+    document.getElementById("age-en").textContent = age;
+    document.getElementById("age-de").textContent = age;
+
+    // رمزگذاری ساده برای امضا
+    const hashedPassword = btoa("3/141592653"); // رمز به base64 رمزنگاری شده
+
+    function showSignature() {
+      const input = prompt("برای مشاهده امضا، رمز را وارد کنید:");
+      if (btoa(input) === hashedPassword) {
+        document.getElementById("signatureDiv").style.display = "block";
+      } else {
+        alert("رمز نادرست است.");
+      }
+    }
+  </script>
+</body>
 </html>
