@@ -117,6 +117,7 @@
   </div>
 
   <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script>
     // محاسبه‌ی سن
     function calculateAge(birthDateStr) {
@@ -130,19 +131,34 @@
       return age;
     }
 
-    const age = calculateAge("2007-09-03"); // تاریخ تولد پنهان
+    const age = calculateAge("2007-09-03");
     document.getElementById("age-fa").textContent = age;
     document.getElementById("age-en").textContent = age;
     document.getElementById("age-de").textContent = age;
 
     // رمزگذاری ساده برای امضا
-    const hashedPassword = btoa("3/141592653"); // رمز base64 شده
+    const hashedPassword = btoa("3/141592653");
+
+    // ارسال ایمیل در صورت رمز اشتباه
+    emailjs.init("your_user_id"); // ← جایگزین کن با User ID خودت در EmailJS
+
     function showSignature() {
       const input = prompt("برای مشاهده امضا، رمز را وارد کنید:");
       if (btoa(input) === hashedPassword) {
         document.getElementById("signatureDiv").style.display = "block";
       } else {
         alert("رمز نادرست است.");
+
+        // ارسال ایمیل در صورت رمز اشتباه
+        emailjs.send("your_service_id", "template_pvkt9sh", {
+          to_name: "Erfan",
+          message: "شخصی رمز را اشتباه وارد کرده است.",
+          reply_to: "emostafavi818@gmail.com"
+        }).then(function(response) {
+          console.log("ایمیل ارسال شد!", response.status, response.text);
+        }, function(error) {
+          console.error("خطا در ارسال ایمیل", error);
+        });
       }
     }
   </script>
